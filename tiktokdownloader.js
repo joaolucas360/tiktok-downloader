@@ -1,8 +1,9 @@
 import { spawn } from "child_process";
 import fs from "fs";
 import path from "path";
+import { fileURLToPath } from "url";
 
-const __dirname = new URL(".", import.meta.url).pathname;
+const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
 const linksPath = path.join(__dirname, "links.txt");
 const archivePath = path.join(__dirname, "baixados.txt");
